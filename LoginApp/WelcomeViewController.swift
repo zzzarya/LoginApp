@@ -16,9 +16,11 @@ class WelcomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
 
-    
     @IBAction func logOutPressed() {
+        
     }
+    
 }
