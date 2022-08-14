@@ -15,13 +15,17 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        
+        welcomeLabel.text = welcomeText
+        
+    }
+    
+    private func setupView() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [UIColor.systemRed.cgColor,
                                 UIColor.systemBlue.cgColor]
         view.layer.insertSublayer(gradientLayer, at: 0)
-        
-        welcomeLabel.text = welcomeText
-        
     }
 }
