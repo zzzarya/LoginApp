@@ -14,23 +14,14 @@ class LoginViewController: UIViewController {
     
     private let userName = "Tony"
     private let password = "123"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
-    }
-    
+        
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true) // С методом из лекции почему-то не работает
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        userNameTF.text == userName && passwordTF.text == password
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-            welcomeVC.welcomeText = "Welcome, \(userName)!"
+        welcomeVC.welcomeText = "Welcome, \(userNameTF.text ?? "")!"
     }
 // MARK: - IBAction
     @IBAction func logInPressed() {

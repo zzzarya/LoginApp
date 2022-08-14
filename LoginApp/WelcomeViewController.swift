@@ -17,13 +17,4 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         welcomeLabel.text = welcomeText
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-
-    @IBAction func logOutPressed() {
-        
-    }
-    
 }
