@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     private let password = "123"
         
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true) // С методом из лекции почему-то не работает
+        self.view.endEditing(true) 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
