@@ -7,32 +7,38 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let userName = "Tony"
+    private let user = "Tony"
     private let password = "123"
         
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true) 
+        self.view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.welcomeText = "Welcome, \(userNameTF.text ?? "")!"
+        guard let tabBar = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBar.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = user
+            }
+        }
     }
 // MARK: - IBAction
     @IBAction func logInPressed() {
-        if userNameTF.text != userName || passwordTF.text != password {
+        if userNameTF.text != user || passwordTF.text != password {
             showAlert(with: "Invalid login or password",
                       and: "Please, enter correct login and password")
         }
     }
     
     @IBAction func forgotUserNamePressed() {
-        showAlert(with: "Oops!", and: "Your name is \(userName)")
+        showAlert(with: "Oops!", and: "Your name is \(user)")
     }
     
     @IBAction func forgotPasswordPressed() {
