@@ -32,10 +32,10 @@ class UserInfoViewController: UIViewController {
         aboutMeLabel.text = person.information.aboutMe
     }
     
-   /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let moreInfoVC = segue.destination as? MoreInfoViewController else { return }
         moreInfoVC.person = person
-    } */
+    }
     
     private func setupView() {
         let gradientLayer = CAGradientLayer()
