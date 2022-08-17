@@ -8,23 +8,29 @@
 import UIKit
 
 class UserInfoViewController: UIViewController {
-
+    
+    @IBOutlet var nameNavigationItem: UINavigationItem!
+    
+    @IBOutlet var fullNameLabel: UILabel!
+    @IBOutlet var ageLabel: UILabel!
+    @IBOutlet var studyPlaceLabel: UILabel!
+    @IBOutlet var workPlaceLabel: UILabel!
+    @IBOutlet var aboutMeLabel: UILabel!
+    
+    var person: Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        // Do any additional setup after loading the view.
+        
+      nameNavigationItem.title = person.information.engFullName
+        fullNameLabel.text = person.information.fullName
+        ageLabel.text = person.information.age
+        studyPlaceLabel.text = person.information.studyPlace
+        workPlaceLabel.text = person.information.workPlace
+        aboutMeLabel.text = person.information.aboutMe
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     private func setupView() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
