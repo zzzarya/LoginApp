@@ -34,7 +34,7 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="xfs-vX-dxk"/>
-                                    <segue destination="Byh-db-89I" kind="presentation" modalPresentationStyle="fullScreen" id="uHK-j1-h16"/>
+                                    <segue destination="Byh-db-89I" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="uHK-j1-h16"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="iSJ-UX-TGS">
@@ -155,7 +155,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="More info"/>
                                 <connections>
-                                    <segue destination="yK6-9o-4HV" kind="show" id="bws-s5-RXR"/>
+                                    <segue destination="yK6-9o-4HV" kind="show" id="u6h-5j-MU9"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="dpr-rU-ywA">
@@ -276,8 +276,8 @@
         <!--More Info View Controller-->
         <scene sceneID="Yo4-hl-Agc">
             <objects>
-                <viewController id="yK6-9o-4HV" customClass="MoreInfoViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="49O-HN-dfj" customClass="MoreInfo">
+                <viewController id="yK6-9o-4HV" customClass="MoreInfoViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="49O-HN-dfj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

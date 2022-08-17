@@ -23,13 +23,19 @@ class UserInfoViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         
-      nameNavigationItem.title = person.information.engFullName
+        nameNavigationItem.title = person.information.engFullName
+        
         fullNameLabel.text = person.information.fullName
         ageLabel.text = person.information.age
         studyPlaceLabel.text = person.information.studyPlace
         workPlaceLabel.text = person.information.workPlace
         aboutMeLabel.text = person.information.aboutMe
     }
+    
+   /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let moreInfoVC = segue.destination as? MoreInfoViewController else { return }
+        moreInfoVC.person = person
+    } */
     
     private func setupView() {
         let gradientLayer = CAGradientLayer()

@@ -9,19 +9,22 @@ import UIKit
 
 class MoreInfoViewController: UIViewController {
 
-    /*   @IBOutlet var emailLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel!
     @IBOutlet var gitHubLabel: UILabel!
     @IBOutlet var telegramLabel: UILabel!
-    @IBOutlet var instagramLabel: UILabel! */
+    @IBOutlet var instagramLabel: UILabel! 
+    
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         
-    /*    emailLabel.text = person.socialMedia.email
+        emailLabel.text = person.socialMedia.email
         gitHubLabel.text = person.socialMedia.gitHub
         telegramLabel.text = person.socialMedia.telegram
-        instagramLabel.text = person.socialMedia.instagram */
+        instagramLabel.text = person.socialMedia.instagram
+        
     }
     
 
